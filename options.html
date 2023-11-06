@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+  <head>
+    <title>Options</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        background-color: #333;
+        color: white;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+      }
+      .input-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 300px;
+      }
+      .instructions {
+        background-color: #444; 
+        border-left: 5px solid #f0f0f0; 
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        line-height: 1.4;
+        border-radius: 4px;
+      }
+
+      .instructions h2 {
+        color: #f0f0f0;
+        margin-top: 0;
+      }
+
+      .instructions p {
+        margin: 10px 0;
+      }
+      label {
+        font-weight: bold;
+      }
+      input[type="text"] {
+        flex-grow: 1;
+        margin-left: 10px;
+        padding: 5px;
+        color: black;
+      }
+      #toast {
+        visibility: hidden;
+        min-width: 150px;
+        margin-left: -75px;
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+      }
+      #toast.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      }
+      @-webkit-keyframes fadein {
+        from {bottom: 0; opacity: 0;} 
+        to {bottom: 30px; opacity: 1;}
+      }
+      @keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+      }
+      @-webkit-keyframes fadeout {
+        from {bottom: 30px; opacity: 1;} 
+        to {bottom: 0; opacity: 0;}
+      }
+      @keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="instructions">
+        <h2>Configuration Instructions</h2>
+        <p>If you are running the Invidious service locally, please use the port you have configured.</p>
+        <p>If you are using an Internet-based Invidious service, you will need to set the port to 443 (which is the HTTPS port number).</p>
+        <p>You can find a list of free Invidious services here: <a href="https://redirect.invidious.io/" target="_blank" style="color: #4ea1d3;">https://redirect.invidious.io/</a></p>
+      </div>
+      <div class="input-group">
+        <label for="url">Invidious URL:</label>
+        <input type="text" id="url" value="http://127.0.0.1">
+      </div>
+      <div class="input-group">
+        <label for="port">Invidious Port:</label>
+        <input type="text" id="port" value="8085">
+      </div>
+      <div id="toast">Options saved</div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>
