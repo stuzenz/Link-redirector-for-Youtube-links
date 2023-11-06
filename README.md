@@ -12,7 +12,7 @@ This extension is intended to be used with Invidious and other similar services
 
 ## Where can I find this extension?
 
-- [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/link-redirector-for-youtube/)
+- [Firefox Add-ons - link-redirector-for-youtube/](https://addons.mozilla.org/en-US/firefox/addon/link-redirector-for-youtube/)
 
 ## What does it look like in firefox
 
