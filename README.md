@@ -35,4 +35,4 @@ It is an alternative front end for youtube that is open source and free to use. 
 - No tracking;
 - No need to sign up;
 - No ads
-- [Invidious project](https://github.com/iv-org/invidious)
+- Visit the [Invidious project](https://github.com/iv-org/invidious) for additional information
